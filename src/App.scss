@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$width: 100%;
+$height: auto;
+$text-decoration: none;
+$list-style: none;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: $list-style;
+  text-decoration: $text-decoration;
+}
+
+.App {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header{
+  width: 100%;
+  height: auto;
+}
+
+.header .wrapper{
+  width: 60%;
+  height: auto;
+  margin: auto;
+
+  .left{
+    width: 30%;
+    height: auto;
+    margin: auto;
+    padding-top: 1rem;
+    text-align: center;
+
+    a{
+      font-size: 1.4rem;
+      color: black;
+    }
+  }
+
+  .right{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+
+    h1{
+      font-size: 1.7rem;
+      color: black;
+      font-weight: 600;
+    }
+  }
+}
+
+.picker {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+}
+
+.picker .wrapper {
+  width: 15%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+h2{
+  width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+$breakpoints: (
+  'xs': 0,
+  'sm': 480px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1200px
+);
+
+
+  @media only screen and (max-width: map-get($breakpoints, 'xl')) {
+.header .wrapper{
+  width: 60%;
+
+    .left{
+    display: none;
+  }
+
+  .right{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.picker .wrapper {
+  width: 17%;
+  text-align: center;
+}
+
+h2{
+  width: 100%;
+}
+
+  }
+
+
+  @media only screen and (max-width: map-get($breakpoints, 'lg')) {
+.header .wrapper{
+  width: 70%;
+  height: auto;
+  margin: auto;
+
+  .left{
+    display:none;
+  }
+}
+
+.picker .wrapper {
+  width: 26%;
+  text-align: center;
+  float:none;
+}
+}
+
+  @media only screen and (max-width: map-get($breakpoints, 'md')) {
+  .header .wrapper{
+  width: 70%;
+  height: auto;
+  margin: auto;
+
+  .left{
+    display:none;
+  }
+}
+
+.picker .wrapper {
+  width: 45%;
+  text-align: center;
+  float:none;
+}
+  }
+
+
+  @media only screen and (max-width: map-get($breakpoints, 'sm')) {
+    .header .wrapper{
+  width: 100%;
+  height: auto;
+  margin: auto;
+
+  .left{
+    display:none;
+  }
+
+  .right{
+    width: 100%;
+    text-align: center;
+    h1{
+    font-size: 1.6rem;
+  }
+  }
+}
+
+.picker .wrapper {
+  width: 79%;
+  text-align: center;
+}
+
+h2{
+  font-size: 1.2rem;
+}
+  }
